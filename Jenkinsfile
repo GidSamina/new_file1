@@ -8,8 +8,12 @@ pipeline {
                     echo "Multiline shell steps works too"
                     ls -lah
                 '''
-        sleep 20
-        sh 'echo "Hello World"'
+      }
+    }
+
+    stage('log') {
+      steps {
+        echo 'log data'
       }
     }
 
