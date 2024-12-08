@@ -9,6 +9,7 @@ pipeline {
                     ls -lah
                 '''
         sleep 20
+        sh 'echo "Hello World"'
       }
     }
 
