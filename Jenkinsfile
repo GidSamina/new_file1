@@ -1,11 +1,14 @@
 pipeline {
-  agent any
-  stages {
-    stage('Checout_code') {
-      steps {
-        git(url: 'https://github.com/GidSamina/new_file1.git', branch: 'main')
-      }
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                sh 'echo "Hello World"'
+                sh '''
+                    echo "Multiline shell steps works too"
+                    ls -lah
+                '''
+            }
+        }
     }
-
-  }
 }
